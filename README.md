@@ -18,10 +18,10 @@ CCD(컴포넌트 주도 개발)
 
 ## 디렉토리 구조
 
-App.js
-|------ Poster
-|------ Program
-|------ Artist
-|------ Book
-|------ Map
+App.js  
+|------ Poster  
+|------ Program  
+|------ Artist  
+|------ Book  
+|------ Map  
 |------ Park
