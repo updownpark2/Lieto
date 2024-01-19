@@ -1,0 +1,45 @@
+.swiper-pagination {
+  position: relative !important;
+  text-align: center;
+  transition: 300ms opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+}
+
+.swiper-button-prev {
+  position: relative;
+  top: var(--swiper-navigation-top-offset, 50%);
+  width: calc(var(--swiper-navigation-size) / 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(-35px - (var(--swiper-navigation-size) / 2)) !important;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white !important;
+  &:active {
+    color: #ffb6c1 !important;
+  }
+}
+.swiper-button-next {
+  right: 0 !important;
+  top: var(--swiper-navigation-top-offset, 50%);
+  width: calc(var(--swiper-navigation-size) / 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(-35px - (var(--swiper-navigation-size) / 2)) !important;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white !important;
+  outline: none !important;
+  &:active {
+    color: #ffb6c1 !important;
+  }
+}
+.swiper-button-next,
+.swiper-button-prev {
+  outline: none !important; /* 포커스 시 테두리 제거 */
+}
