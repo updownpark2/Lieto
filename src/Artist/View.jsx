@@ -2,29 +2,65 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./artist.css";
-import image1 from "./img/1.jpg";
-import image2 from "./img/2.jpg";
-import image3 from "./img/3.jpg";
+import image1 from "./img/1.jpeg";
+import image2 from "./img/2.jpeg";
+import image3 from "./img/3.jpeg";
+import image4 from "./img/4.jpeg";
+import image5 from "./img/5.jpeg";
+import image6 from "./img/6.jpeg";
+import image7 from "./img/7.jpeg";
+import image8 from "./img/8.jpeg";
+import image9 from "./img/9.jpeg";
+import image10 from "./img/10.jpeg";
+import image11 from "./img/11.jpeg";
+import image12 from "./img/12.jpeg";
+import image13 from "./img/13.jpeg";
+import image14 from "./img/14.jpeg";
+import image15 from "./img/15.jpeg";
+import image16 from "./img/16.jpeg";
+import image17 from "./img/17.jpeg";
+import image18 from "./img/18.jpeg";
+import image19 from "./img/19.jpeg";
+import image20 from "./img/20.jpeg";
+import image21 from "./img/21.jpeg";
+import image22 from "./img/22.jpeg";
+import image23 from "./img/23.jpeg";
+import image24 from "./img/24.jpeg";
+import { artist } from "./artistDummy.js";
 import { Pagination, Navigation } from "swiper/modules";
 import styled, { keyframes } from "styled-components";
 import React from "react";
 import "swiper/swiper-bundle.css";
 import { useInView } from "react-intersection-observer";
 import { useRef } from "react";
-import Arrow from "./Arrow.png";
-import ReverseArrow from "./Arrow2.png";
 
 const imgArr = [
   image1,
   image2,
   image3,
-  image1,
-  image2,
-  image3,
-  image1,
-  image2,
-  image3,
+  image4,
+  image5,
+  image6,
+  image7,
+  image8,
+  image9,
+  image10,
+  image11,
+  image12,
+  image13,
+  image14,
+  image15,
+  image16,
+  image17,
+  image18,
+  image19,
+  image20,
+  image21,
+  image22,
+  image23,
+  image24,
 ];
+
 const frameInAnimation = keyframes`
   0% {
     opacity: 0;
@@ -44,7 +80,7 @@ const Fake = styled.div`
 const Container = styled.div`
   opacity: ${(props) => (props.inView ? 1 : 0)};
   animation: ${(props) => (props.inView ? frameInAnimation : null)} 2s forwards;
-  height: 70vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,20 +88,25 @@ const Container = styled.div`
 
 const SliderContainer = styled.div`
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Title = styled.span`
   width: max-content;
+
   padding: 10px;
   border-radius: 5px;
   color: black;
   font-size: 32px;
-  font-weight: 360;
+  font-weight: 330;
   margin-bottom: 10px;
   margin-left: 20px;
 `;
 const Image = styled.img`
   width: 100%;
+
   border-radius: 10%;
   object-fit: cover;
 `;
@@ -82,20 +123,31 @@ const DescriptionContainer = styled.div`
   padding: 10px 0;
   width: auto;
 `;
+const NameDescription = styled.p`
+  color: black;
+  font-size: 20px;
+  text-align: left;
+  margin-top: 2px;
+  margin-bottom: 10px;
+  margin-left: 6px;
+  font-weight: 360;
+`;
+
 const Description = styled.p`
   color: black;
+  opacity: 0.78;
   font-size: 14px;
-  text-align: center;
-  margin: 1px 0;
-  font-weight: 360;
+  text-align: left;
+  margin-top: 2px;
+  margin-left: 6px;
+  margin-left: 5px;
+  margin-bottom: 15px;
+  font-weight: 330;
 `;
 export default function ArtistView() {
   const { ref, inView, entry } = useInView({ threshold: 0.1 });
   // 해당 ref가 적용된 태그의 정보를 가져오는데
   // 만약 해당 컴포넌트가 viewpoint에 보인다면 inView가 true
-
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
 
   return (
     <Fake>
@@ -113,17 +165,15 @@ export default function ArtistView() {
             }}
             loop={true}
             navigation
-            pagination={{
-              clickable: true,
-            }}
           >
-            {imgArr.map((img) => (
+            {imgArr.map((img, i) => (
               <SwiperSlide>
                 <Image src={img} />
                 <DescriptionContainer>
-                  <Description>최혜지</Description>
-                  <Description>최혜지,우승</Description>
-                  <Description>최혜지,우승</Description>
+                  <NameDescription>{artist[i][0]} .pf</NameDescription>
+                  {artist[i][1].map((info) => (
+                    <Description>{info}</Description>
+                  ))}
                 </DescriptionContainer>
               </SwiperSlide>
             ))}

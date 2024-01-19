@@ -94,7 +94,7 @@ export default function Title() {
       <IntroduceContainer>
         <Title>Lieto Piano Concert</Title>
         <Summary>A one-of-a-kind experience</Summary>
-        <Summary>In Gwang-Ju Art-hall</Summary>
+        <Summary>In Gwang-Ju DM-hall</Summary>
         <ButtonContainer>
           <Button onClick={moveToNaverBookPage}>Get Tickets For Free</Button>
         </ButtonContainer>

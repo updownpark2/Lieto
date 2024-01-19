@@ -17,7 +17,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.h2`
-  font-weight: 360;
+  font-weight: 330;
   margin-left: 20px;
   font-size: 32px;
 `;
@@ -29,8 +29,14 @@ const ArtistContainer = styled.div`
   opacity: ${(props) => (props.inView ? 1 : 0)};
   animation: ${(props) => (props.inView ? frameInAnimation : null)} 2s forwards;
 `;
+const ArtistName = styled.h3`
+  font-weight: 350;
+  margin-bottom: 10px;
+`;
+
 const List = styled.li`
   list-style: none;
+  font-weight: 330;
 `;
 
 export default function PosterView({ artist, time }) {
@@ -41,13 +47,15 @@ export default function PosterView({ artist, time }) {
 
       {artist.map((artistArr) => (
         <ArtistContainer inView={inView}>
-          <h3>{"1st" + artistArr[0][0] + "  2nd" + artistArr[0][1]}</h3>
+          <ArtistName>
+            {"1st" + artistArr[0][0] + "  2nd" + artistArr[0][1]}
+          </ArtistName>
           <ul>
             {artistArr[1].map((music) => (
               <List>{music}</List>
             ))}
           </ul>
-          <br />
+          <hr style={{ color: "#999999", borderStyle: "dotted" }} />
         </ArtistContainer>
       ))}
     </Container>
