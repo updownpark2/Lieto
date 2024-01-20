@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 const frameInAnimation = keyframes`
   0% {
     opacity: 0;
-    transform: translateY(-20%);
+    transform: translateY(-10%);
   }
 
   100%{
