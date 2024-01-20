@@ -84,7 +84,7 @@ const Fake = styled.div`
 const Container = styled.div`
   height: 130vh;
   @media (max-width: 768px) {
-    height: 100vh;
+    height: fit-content;
   }
 `;
 

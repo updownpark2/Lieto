@@ -13,6 +13,7 @@ const frameInAnimation = keyframes`
 `;
 
 const Container = styled.div`
+  padding-top: 50px;
   height: fit-content;
   background-color: #f7e1e2;
 `;
