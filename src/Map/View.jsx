@@ -1,5 +1,5 @@
 import { useInView } from "react-intersection-observer";
-import { Map, MapMarker } from "react-kakao-maps-sdk";
+import { CustomOverlayMap, Map, MapMarker } from "react-kakao-maps-sdk";
 import styled, { keyframes } from "styled-components";
 import flower from "./flower.png";
 
@@ -22,54 +22,67 @@ const Fake = styled.div`
 const Container = styled.div`
   animation: ${(props) => (props.inView ? frameInAnimation : null)} 2s forwards;
 `;
-const MarkerText = styled.div`
-  background-color: #ffe4e1;
-  border: 0;
-  border-radius: 10px;
-  padding: 10px;
-  font-weight: 400;
+
+const Title = styled.span`
+  display: block;
+  padding: 20px 0;
+  border-radius: 5px;
+  color: black;
+  font-size: 27px;
+  font-weight: 340;
+
+  margin-left: 20px;
+`;
+const Img = styled.img`
+  width: 50px;
+  height: 50px;
 `;
 
-export default function MapView() {
+export default function MapView({ where, gps, title }) {
   const findDirectionToLieto = () => {
-    window.open(
-      `https://map.kakao.com/link/to/광주디엠홀,${process.env.REACT_APP_LIETO_LAT},${process.env.REACT_APP_LIETO_LNG}`
-    );
+    window.open(`https://map.kakao.com/link/to/${where},${gps[0]},${gps[1]}`);
   };
 
   const { ref, inView, entry } = useInView({ threshold: 0.1 });
 
   return (
     <Fake>
+      <Title>
+        {title} &#40;{where}&#41;
+      </Title>
       <Container ref={ref} inView={inView}>
         <Map
           center={{
-            lat: process.env.REACT_APP_LIETO_LAT,
-            lng: process.env.REACT_APP_LIETO_LNG,
+            lat: gps[0],
+            lng: gps[1],
           }}
           style={{ width: "100%", height: "360px" }}
           level={2}
         >
-          <MapMarker
-            onClick={findDirectionToLieto}
+          <CustomOverlayMap
             position={{
-              lat: process.env.REACT_APP_LIETO_LAT,
-              lng: process.env.REACT_APP_LIETO_LNG,
+              lat: gps[0],
+              lng: gps[1],
             }}
-            image={{
-              src: flower,
-              size: {
-                width: 50,
-                height: 50,
-              }, // 마커이미지의 크기입니다
-              options: {
-                offset: {
-                  x: 27,
-                  y: 69,
-                }, // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
-              },
-            }}
-          ></MapMarker>
+          >
+            <div
+              onClick={findDirectionToLieto}
+              className="label"
+              style={{
+                color: "#000",
+                fontWeight: 330,
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <span className="center">
+                <Img src={flower}></Img>
+              </span>
+              <span style={{ backgroundColor: "#f7e1e2" }} className="right">
+                터치로 길찾기
+              </span>
+            </div>
+          </CustomOverlayMap>
         </Map>
       </Container>
     </Fake>
