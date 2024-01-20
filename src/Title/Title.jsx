@@ -1,6 +1,17 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import gif from "./Lieto.gif";
+const blink = keyframes`
+  0% {
+    opacity: 0;
+  }
 
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+`;
 export default function Title() {
   const moveToNaverBookPage = () => {
     window.open(`https://form.naver.com/response/9THVfo9OMccOdPWVvpLEdw`);
@@ -9,6 +20,7 @@ export default function Title() {
   // css
 
   const Container = styled.div`
+    position: relative;
     height: 100vh;
     display: flex;
     justify-content: space-around;
@@ -74,6 +86,15 @@ export default function Title() {
     margin-top: 20px;
     font-size: 20px;
   `;
+  const DownSpan = styled.span`
+    display: block;
+    position: absolute;
+    font-size: 20px;
+    font-weight: 340;
+    bottom: 10px;
+    left: 10px;
+    animation: ${blink} 1.9s ease-in-out infinite;
+  `;
   return (
     <Container>
       <IntroduceContainer>
@@ -83,6 +104,7 @@ export default function Title() {
         <ButtonContainer>
           <Button onClick={moveToNaverBookPage}>Get Tickets For Free</Button>
         </ButtonContainer>
+        <DownSpan>아래로</DownSpan>
       </IntroduceContainer>
       <VideoContainer>
         <Gif src={gif} loop="infinite"></Gif>
