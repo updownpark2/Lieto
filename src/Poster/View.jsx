@@ -14,7 +14,7 @@ const frameInAnimation = keyframes`
 
 const Container = styled.div`
   background-color: #f7e1e2;
-  padding-top: 50px;
+  padding-top: 100px;
 `;
 
 const Title = styled.h2`
