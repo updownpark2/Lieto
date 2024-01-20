@@ -19,9 +19,7 @@ const Fake = styled.div`
   z-index: -1;
 `;
 
-const Container = styled.div`
-  animation: ${(props) => (props.inView ? frameInAnimation : null)} 2s forwards;
-`;
+const Container = styled.div``;
 
 const Title = styled.span`
   display: block;
