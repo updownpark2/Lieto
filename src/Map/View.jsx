@@ -54,7 +54,7 @@ export default function MapView({ where, gps, title }) {
             lat: gps[0],
             lng: gps[1],
           }}
-          style={{ width: "100%", height: "360px" }}
+          style={{ width: "100%", height: "300px" }}
           level={2}
           draggable={false}
         >

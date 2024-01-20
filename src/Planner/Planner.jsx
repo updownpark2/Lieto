@@ -15,7 +15,7 @@ const blink = keyframes`
 `;
 
 const Container = styled.div`
-  background-color: white;
+  background-color: #f7e1e2;
   height: 80vh;
   @media (max-width: 768px) {
     height: 40vh;
@@ -39,7 +39,7 @@ const Img = styled.img`
 `;
 
 const SummaryBox = styled.div`
-  border: 1px dotted #999999;
+  border: 1.5px dotted white;
   padding: 5px;
   border-radius: 10px;
 `;
