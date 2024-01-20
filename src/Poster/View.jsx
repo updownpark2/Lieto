@@ -46,7 +46,7 @@ const List = styled.li`
 
 export default function PosterView({ artist, time }) {
   const { ref, inView, entry } = useInView({
-    threshold: 0.3,
+    threshold: 0.6,
     initialInView: true,
   });
   return (
