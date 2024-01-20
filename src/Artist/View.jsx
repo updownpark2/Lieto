@@ -134,7 +134,7 @@ const Description = styled.p`
   margin-top: 2px;
   margin-left: 10px;
   margin-left: 5px;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
   font-weight: 330;
 `;
 export default function ArtistView() {
