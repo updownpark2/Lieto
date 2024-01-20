@@ -35,8 +35,14 @@ const Img = styled.img`
   width: 50px;
   height: 50px;
 `;
+const Detail = styled.span`
+  font-size: 20px;
+  font-weight: 340;
+  display: block;
+  margin-top: 10px;
+`;
 
-export default function MapView({ where, gps, title }) {
+export default function MapView({ where, gps, title, detail }) {
   const findDirectionToLieto = () => {
     window.open(`https://map.kakao.com/link/to/${where},${gps[0]},${gps[1]}`);
   };
@@ -46,7 +52,7 @@ export default function MapView({ where, gps, title }) {
   return (
     <Fake>
       <Title>
-        {title} &#40;{where}&#41;
+        {title} &#40;{where}&#41; {detail ? <Detail>{detail}</Detail> : null}
       </Title>
       <Container ref={ref} inView={inView}>
         <Map

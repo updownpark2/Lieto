@@ -50,7 +50,12 @@ function App() {
         <MapView where={"광주디엠홀"} title={"오시는길"} gps={DMgps} />
       </Suspense>
       <Suspense fallback={<Loader />}>
-        <MapView where={"광주태평주차장"} title={"주차안내"} gps={Parkgps} />
+        <MapView
+          where={"광주태평주차장"}
+          title={"주차안내"}
+          gps={Parkgps}
+          detail={"공연 관람시 2시간 무료"}
+        />
       </Suspense>
       <Suspense fallback={<Loader />}>
         <Planner />
