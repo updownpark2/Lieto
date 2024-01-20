@@ -47,14 +47,12 @@ export default function MapView({ where, gps, title, detail }) {
     window.open(`https://map.kakao.com/link/to/${where},${gps[0]},${gps[1]}`);
   };
 
-  const { ref, inView, entry } = useInView({ threshold: 0.1 });
-
   return (
     <Fake>
       <Title>
         {title} &#40;{where}&#41; {detail ? <Detail>{detail}</Detail> : null}
       </Title>
-      <Container ref={ref} inView={inView}>
+      <Container>
         <Map
           center={{
             lat: gps[0],
