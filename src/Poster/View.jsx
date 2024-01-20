@@ -25,7 +25,8 @@ const ArtistContainer = styled.div`
   width: 70%;
   margin-left: 20px;
   border-radius: 20px;
-  padding: 20px;
+  padding-top: 15px;
+  padding-bottom: 5px;
   opacity: ${(props) => (props.inView ? 1 : 0)};
   animation: ${(props) => (props.inView ? frameInAnimation : null)} 2s forwards;
 `;
@@ -37,10 +38,14 @@ const ArtistName = styled.h3`
 const List = styled.li`
   list-style: none;
   font-weight: 330;
+  margin-bottom: 3px;
 `;
 
 export default function PosterView({ artist, time }) {
-  const { ref, inView, entry } = useInView({ threshold: 0.1 });
+  const { ref, inView, entry } = useInView({
+    threshold: 0.1,
+    initialInView: true,
+  });
   return (
     <Container ref={ref}>
       <Title>program {time}</Title>

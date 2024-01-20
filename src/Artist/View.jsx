@@ -75,29 +75,30 @@ const frameInAnimation = keyframes`
 const Fake = styled.div`
   background-color: #f7e1e2;
   z-index: -1;
+  height: 130vh;
+  @media (max-width: 768px) {
+    height: 90vh;
+  }
 `;
 
 const Container = styled.div`
-  opacity: ${(props) => (props.inView ? 1 : 0)};
-  animation: ${(props) => (props.inView ? frameInAnimation : null)} 2s forwards;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  height: 130vh;
+  @media (max-width: 768px) {
+    height: 90vh;
+  }
 `;
 
 const SliderContainer = styled.div`
+  opacity: ${(props) => (props.inView ? 1 : 0)};
+  animation: ${(props) => (props.inView ? frameInAnimation : null)} 2s forwards;
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  padding-top: 20px;
 `;
 
 const Title = styled.span`
   width: max-content;
-
   padding: 10px;
-  border-radius: 5px;
   color: black;
   font-size: 32px;
   font-weight: 330;
@@ -110,18 +111,9 @@ const Image = styled.img`
   border-radius: 10%;
   object-fit: cover;
 `;
-const NavigatorButtonBox = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
-const ArrowImage = styled.img`
-  width: 2em;
-  height: 2em;
-`;
+
 const DescriptionContainer = styled.div`
-  border-radius: 20px;
-  padding: 10px 0;
-  width: auto;
+  margin: 0 5px;
 `;
 const NameDescription = styled.p`
   color: black;
@@ -139,21 +131,22 @@ const Description = styled.p`
   font-size: 14px;
   text-align: left;
   margin-top: 2px;
-  margin-left: 6px;
+  margin-left: 10px;
   margin-left: 5px;
   margin-bottom: 15px;
   font-weight: 330;
 `;
 export default function ArtistView() {
   const { ref, inView, entry } = useInView({ threshold: 0.1 });
+
   // 해당 ref가 적용된 태그의 정보를 가져오는데
   // 만약 해당 컴포넌트가 viewpoint에 보인다면 inView가 true
 
   return (
     <Fake>
-      <Container ref={ref} inView={inView}>
+      <Container>
         <Title>Artist</Title>
-        <SliderContainer>
+        <SliderContainer ref={ref} inView={inView}>
           <Swiper
             modules={[Navigation, Pagination]}
             spaceBetween={20}
@@ -170,7 +163,7 @@ export default function ArtistView() {
               <SwiperSlide>
                 <Image src={img} />
                 <DescriptionContainer>
-                  <NameDescription>{artist[i][0]} .pf</NameDescription>
+                  <NameDescription>{artist[i][0]} pf.</NameDescription>
                   {artist[i][1].map((info) => (
                     <Description>{info}</Description>
                   ))}

@@ -13,7 +13,7 @@ export default function Title() {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #ffe4e1;
+    background-color: white;
     @media (max-width: 768px) {
       position: relative;
       background-color: transparent;
@@ -36,10 +36,6 @@ export default function Title() {
     width: 100%;
     height: 100%;
     object-fit: fill;
-    border-radius: 20px;
-    @media (max-width: 768px) {
-      border-radius: 0;
-    }
   `;
   const IntroduceContainer = styled.div`
     width: 50%;
@@ -59,17 +55,6 @@ export default function Title() {
   const Summary = styled.p`
     font-weight: 400;
     font-size: 23px;
-  `;
-  const UnderLineTextContainer = styled.div`
-    margin-top: 140px;
-  `;
-
-  const UnderLineText = styled.p`
-    width: 200px;
-    font-weight: 400;
-    font-size: 20px;
-    border-bottom: 1px solid white;
-    margin-top: 10px;
   `;
 
   const ButtonContainer = styled.div`
