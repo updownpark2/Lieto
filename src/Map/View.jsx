@@ -58,6 +58,7 @@ export default function MapView({ where, gps, title }) {
           }}
           style={{ width: "100%", height: "360px" }}
           level={2}
+          draggable={draggable}
         >
           <CustomOverlayMap
             position={{
