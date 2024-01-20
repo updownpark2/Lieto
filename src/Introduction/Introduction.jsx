@@ -75,10 +75,8 @@ export default function Introduction() {
           <IntroText>포핸즈 앙상블 음악을 감상하며</IntroText>
           <IntroText>행복한 기억을 남겼으면 합니다</IntroText>
           <IntroText>24인의 광주/전남 출신 피아니스트들이</IntroText>
-          <IntroText>짝을 이루어 one piano four hands로 </IntroText>
-          <IntroText>
-            다양한 작곡가들의 four hands의 곡들을 연주합니다.
-          </IntroText>
+          <IntroText>짝을 이루어 1 piano 4 hands로 </IntroText>
+          <IntroText>다양한 작곡가들의 4 hands의 곡들을 연주합니다.</IntroText>
           <IntroText>많은 관심 부탁드립니다 : &#41;</IntroText>
         </IntroTextBox>
         <hr style={{ color: "#999999", borderStyle: "dotted" }} />

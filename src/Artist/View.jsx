@@ -163,7 +163,7 @@ export default function ArtistView() {
               <SwiperSlide>
                 <Image src={img} />
                 <DescriptionContainer>
-                  <NameDescription>{artist[i][0]} pf.</NameDescription>
+                  <NameDescription>pf. {artist[i][0]}</NameDescription>
                   {artist[i][1].map((info) => (
                     <Description>{info}</Description>
                   ))}
