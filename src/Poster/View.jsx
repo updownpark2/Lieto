@@ -13,8 +13,8 @@ const frameInAnimation = keyframes`
 `;
 
 const Container = styled.div`
+  height: fit-content;
   background-color: #f7e1e2;
-  padding-top: 100px;
 `;
 
 const Title = styled.h2`
@@ -27,7 +27,7 @@ const ArtistContainer = styled.div`
   margin-left: 20px;
   border-radius: 20px;
   padding-top: 15px;
-  padding-bottom: 5px;
+
   opacity: ${(props) => (props.inView ? 1 : 0)};
   animation: ${(props) => (props.inView ? frameInAnimation : null)} 1.5s
     forwards;
@@ -45,7 +45,7 @@ const List = styled.li`
 
 export default function PosterView({ artist, time }) {
   const { ref, inView, entry } = useInView({
-    threshold: 0.5,
+    threshold: 0.3,
     initialInView: true,
   });
   return (

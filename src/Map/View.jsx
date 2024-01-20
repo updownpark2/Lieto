@@ -3,33 +3,22 @@ import { CustomOverlayMap, Map, MapMarker } from "react-kakao-maps-sdk";
 import styled, { keyframes } from "styled-components";
 import flower from "./flower.png";
 
-const frameInAnimation = keyframes`
-  0% {
-    opacity: 0;
-    transform: translateY(-20%);
-  }
-
-  100%{
-    opacity: 1;
-    transform: translateY(0%);
-  }
-`;
 const Fake = styled.div`
   background-color: #f7e1e2;
   z-index: -1;
+  padding-top: 100px;
 `;
 
 const Container = styled.div``;
 
 const Title = styled.span`
   display: block;
-  padding: 50px 0;
   border-radius: 5px;
   color: black;
   font-size: 27px;
   font-weight: 340;
-
   margin-left: 20px;
+  margin-bottom: 20px;
 `;
 const Img = styled.img`
   width: 50px;
