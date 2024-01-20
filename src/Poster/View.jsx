@@ -51,7 +51,7 @@ export default function PosterView({ artist, time }) {
     <Container ref={ref}>
       <Title>program {time}</Title>
 
-      {artist.map((artistArr) => (
+      {artist.map((artistArr, index) => (
         <ArtistContainer inView={inView}>
           <ArtistName>
             {"1st" + artistArr[0][0] + "  2nd" + artistArr[0][1]}
@@ -61,6 +61,9 @@ export default function PosterView({ artist, time }) {
               <List>{music}</List>
             ))}
           </ul>
+          {index === 5 && artist.length === 7 ? null : (
+            <hr style={{ color: "#999999", borderStyle: "dotted" }} />
+          )}
         </ArtistContainer>
       ))}
     </Container>
