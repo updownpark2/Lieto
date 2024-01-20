@@ -8,6 +8,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
 `;
+const MentionBox = styled.div``;
 const Mention = styled.h2`
   text-align: center;
 `;
@@ -15,8 +16,10 @@ const Mention = styled.h2`
 export const Loader = () => {
   return (
     <Container>
-      <Mention>잠시만 기다려주세요</Mention>
-      <img src={Spinner} alt="로딩" width="10%"></img>
+      <MentionBox>
+        <Mention>잠시만 기다려주세요</Mention>
+        <img src={Spinner} alt="로딩" width="10%"></img>
+      </MentionBox>
     </Container>
   );
 };
