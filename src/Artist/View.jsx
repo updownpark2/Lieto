@@ -138,7 +138,7 @@ const Description = styled.p`
   font-weight: 330;
 `;
 export default function ArtistView() {
-  const { ref, inView, entry } = useInView({ threshold: 0.66 });
+  const { ref, inView, entry } = useInView({ threshold: 0.2 });
 
   // 해당 ref가 적용된 태그의 정보를 가져오는데
   // 만약 해당 컴포넌트가 viewpoint에 보인다면 inView가 true

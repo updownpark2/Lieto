@@ -3,12 +3,12 @@ import { useInView } from "react-intersection-observer";
 const frameInAnimation = keyframes`
   0% {
     opacity: 0;
-    transform: translateY(-10%);
+    
   }
 
   100%{
     opacity: 1;
-    transform: translateY(0%);
+    
   }
 `;
 
@@ -46,7 +46,7 @@ const List = styled.li`
 
 export default function PosterView({ artist, time }) {
   const { ref, inView, entry } = useInView({
-    threshold: 0.66,
+    threshold: 0.2,
     initialInView: true,
   });
   return (

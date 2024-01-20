@@ -60,7 +60,7 @@ const IntroText = styled.span`
 `;
 
 export default function Introduction() {
-  const { ref, inView, entry } = useInView({ threshold: 0.66 });
+  const { ref, inView, entry } = useInView({ threshold: 0.2 });
   return (
     <Fake>
       <Container ref={ref} inView={inView}>
