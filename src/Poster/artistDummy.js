@@ -40,7 +40,7 @@ export const artist = [
 
 export const artist2 = [
   [
-    ["김세연", "이세현"],
+    ["김세연", "이서현"],
     [
       "C. Debussy - Petite Suite for 1 piano 4 hands",
       "I. En Bateau",
