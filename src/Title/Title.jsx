@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import video from "../Title/Lieto2.mp4";
+import gif from "./Lieto.gif";
 
 export default function Title() {
   const moveToNaverBookPage = () => {
@@ -32,7 +32,7 @@ export default function Title() {
       opacity: 1;
     }
   `;
-  const Video = styled.video`
+  const Gif = styled.img`
     width: 100%;
     height: 100%;
     object-fit: fill;
@@ -85,9 +85,7 @@ export default function Title() {
         </ButtonContainer>
       </IntroduceContainer>
       <VideoContainer>
-        <Video autoPlay loop muted>
-          <source src={video} type="video/mp4" />
-        </Video>
+        <Gif src={gif} loop="infinite"></Gif>
       </VideoContainer>
     </Container>
   );

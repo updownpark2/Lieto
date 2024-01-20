@@ -18,7 +18,6 @@ const Fake = styled.div`
   z-index: -1;
 `;
 const Container = styled.div`
-  background-color: #f7e1e2;
   height: 70vh;
   display: flex;
   flex-direction: column;
