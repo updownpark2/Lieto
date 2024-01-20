@@ -61,7 +61,6 @@ export default function PosterView({ artist, time }) {
               <List>{music}</List>
             ))}
           </ul>
-          <hr style={{ color: "#999999", borderStyle: "dotted" }} />
         </ArtistContainer>
       ))}
     </Container>
