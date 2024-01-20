@@ -5,7 +5,7 @@
   textarea:focus {
     outline: none;
   }
-  font-family: sans-serif;
+  font-family: sans-serif !important;
 }
 *:focus {
   outline: none !important;
