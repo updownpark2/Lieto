@@ -90,7 +90,8 @@ const Container = styled.div`
 
 const SliderContainer = styled.div`
   opacity: ${(props) => (props.inView ? 1 : 0)};
-  animation: ${(props) => (props.inView ? frameInAnimation : null)} 2s forwards;
+  animation: ${(props) => (props.inView ? frameInAnimation : null)} 1.5s
+    forwards;
   width: 100%;
   display: flex;
   padding-top: 20px;

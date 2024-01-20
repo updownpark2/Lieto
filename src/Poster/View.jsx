@@ -29,7 +29,8 @@ const ArtistContainer = styled.div`
   padding-top: 15px;
   padding-bottom: 5px;
   opacity: ${(props) => (props.inView ? 1 : 0)};
-  animation: ${(props) => (props.inView ? frameInAnimation : null)} 2s forwards;
+  animation: ${(props) => (props.inView ? frameInAnimation : null)} 1.5s
+    forwards;
 `;
 const ArtistName = styled.h3`
   font-weight: 350;

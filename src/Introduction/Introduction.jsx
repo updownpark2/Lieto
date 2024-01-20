@@ -24,7 +24,8 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   opacity: ${(props) => (props.inView ? 1 : 0)};
-  animation: ${(props) => (props.inView ? frameInAnimation : null)} 2s forwards;
+  animation: ${(props) => (props.inView ? frameInAnimation : null)} 1.5s
+    forwards;
 `;
 
 const IntroDate = styled.span`
