@@ -79,13 +79,16 @@ export const artist2 = [
   [
     ["장가을", "김수현"],
     [
-      "C. Debussy - Petite Suite for 1piano 4 hands",
-      "I. En Bateau",
-      "II. Cortège",
-      "III. Menuet",
-      "IV. Ballet",
+      " C. Saint Saëns - The Canival of Animals, R. 125",
+      "I. Introduction And Royal March Of The Lion",
+      "VII. Aquarium",
+      "IX. Le Coucou au fond des bois",
+      "XII. Fossiles",
+      "XIII. Le Cygne",
+      "XIV. Final",
     ],
   ],
+
   [
     ["유예름", "정지민"],
     [
