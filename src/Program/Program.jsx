@@ -9,7 +9,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: #f7e1e2;
-  height: 100vh;
+  height: auto;
   @media (max-width: 768px) {
     height: auto;
     position: relative;
@@ -22,17 +22,24 @@ const PosterImage = styled.img`
   height: 100%;
   object-fit: contain;
   border-radius: 20px;
+  display: none;
   @media (max-width: 768px) {
-    border-radius: 0;
+    display: inline;
   }
+`;
+const PampletImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 20px;
 `;
 
 export default function Program() {
   return (
     <Container>
       <PosterImage src={Poster}></PosterImage>
-      <PosterImage src={Pamplet}></PosterImage>
-      <PosterImage src={Pamplet2}></PosterImage>
+      <PampletImage src={Pamplet}></PampletImage>
+      <PampletImage src={Pamplet2}></PampletImage>
     </Container>
   );
 }
