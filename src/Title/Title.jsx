@@ -3,13 +3,12 @@ import gif from "./Lieto.gif";
 const blink = keyframes`
   0% {
     opacity: 0;
+    transform: translateY(-100%);
   }
 
-  50%{
-    opacity: 1;
-  }
   100%{
-    opacity: 0;
+    opacity: 1;
+    transform: translateY(0%);
   }
 `;
 export default function Title() {
@@ -104,7 +103,7 @@ export default function Title() {
         <ButtonContainer>
           <Button onClick={moveToNaverBookPage}>Get Tickets For Free</Button>
         </ButtonContainer>
-        <DownSpan>아래로</DownSpan>
+        <DownSpan>Down slide</DownSpan>
       </IntroduceContainer>
       <VideoContainer>
         <Gif src={gif} loop="infinite"></Gif>
