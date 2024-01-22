@@ -103,7 +103,7 @@ export default function Title() {
         <ButtonContainer>
           <Button onClick={moveToNaverBookPage}>Get Tickets For Free</Button>
         </ButtonContainer>
-        <DownSpan>Down slide</DownSpan>
+        <DownSpan>Slide down</DownSpan>
       </IntroduceContainer>
       <VideoContainer>
         <Gif src={gif} loop="infinite"></Gif>
