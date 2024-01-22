@@ -21,7 +21,6 @@ const PosterImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 20px;
   display: none;
   @media (max-width: 768px) {
     display: inline;
@@ -31,7 +30,6 @@ const PampletImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 20px;
 `;
 
 export default function Program() {
