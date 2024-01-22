@@ -84,11 +84,13 @@ export const artist = [
   ],
   [
     ["강온유"],
-    ["독일 Chopin International Music Academy Larh Diploma 수료"],
-    ["국립 순천대학교 2piano 8hands 테마연주 출연"],
-    ["HAPPY CONCERT 4~7회 출연"],
-    ["'피아노, 삶과 함께하다' 연주 프로그램 출연"],
-    ["현) 국립순천대학교 4학년 재학"],
+    [
+      "독일 Chopin International Music Academy Larh Diploma 수료",
+      "국립 순천대학교 2piano 8hands 테마연주 출연",
+      "HAPPY CONCERT 4~7회 출연",
+      "'피아노, 삶과 함께하다' 연주 프로그램 출연",
+      "현) 국립순천대학교 4학년 재학",
+    ],
   ],
   [
     ["김경은"],
