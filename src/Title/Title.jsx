@@ -22,9 +22,9 @@ export default function Title() {
     position: relative;
     height: 100vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: #f7e1e2;
     @media (max-width: 768px) {
       position: relative;
       background-color: transparent;
@@ -32,7 +32,10 @@ export default function Title() {
   `;
   const VideoContainer = styled.div`
     height: 100%;
-    width: 50%;
+    width: 35%;
+    @media (max-width: 1100px) {
+      width: 50%;
+    }
     @media (max-width: 768px) {
       position: absolute;
       top: 0;
@@ -50,9 +53,10 @@ export default function Title() {
   `;
   const IntroduceContainer = styled.div`
     width: 50%;
-    text-align: left;
+    text-align: center;
     margin-left: 30px;
     color: #ffb6c1;
+
     @media (max-width: 768px) {
       width: 100%;
       text-align: center;
@@ -60,18 +64,26 @@ export default function Title() {
     }
   `;
   const Title = styled.h1`
-    font-weight: 600;
+    font-weight: 300;
     font-size: 40px;
+    color: #f9a6b2;
+    @media (max-width: 768px) {
+      color: #ffb6c1;
+    }
   `;
   const Summary = styled.p`
-    font-weight: 400;
+    color: #fbb1bc;
+    font-weight: 300;
     font-size: 23px;
+    @media (max-width: 768px) {
+      color: #ffb6c1;
+    }
   `;
 
   const ButtonContainer = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     color: white;
     @media (max-width: 768px) {
       width: 100%;
