@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import Poster from "./LietoPoster.jpeg";
-import Pamplet from "./LietoPam1.jpeg";
-import Pamplet2 from "./LietoPam2.jpeg";
+import LietoPoster from "./img/LietoPoster.jpeg";
+import LietoPam1 from "./img/LietoPam1.jpeg";
+import LietoPam2 from "./img/LietoPam2.jpeg";
 
 const Container = styled.div`
   display: flex;
@@ -35,9 +35,9 @@ const PampletImage = styled.img`
 export default function Program() {
   return (
     <Container>
-      <PosterImage src={Poster}></PosterImage>
-      <PampletImage src={Pamplet}></PampletImage>
-      <PampletImage src={Pamplet2}></PampletImage>
+      <PosterImage src={LietoPoster}></PosterImage>
+      <PampletImage src={LietoPam1}></PampletImage>
+      <PampletImage src={LietoPam2}></PampletImage>
     </Container>
   );
 }

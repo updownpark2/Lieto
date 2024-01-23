@@ -2,6 +2,9 @@ import React from "react";
 import { Suspense } from "react";
 import { Loader } from "./Loader";
 import { artist, artist2 } from "./Poster/artistDummy.js";
+import { useInView } from "react-intersection-observer";
+import { useRef } from "react";
+import { useEffect } from "react";
 
 const Title = React.lazy(() => import("./Title/Title.jsx"));
 const Program = React.lazy(() => import("./Program/Program.jsx"));
@@ -31,7 +34,7 @@ function App() {
       <Suspense fallback={<Loader />}>
         <Title />
       </Suspense>
-      <Suspense>
+      <Suspense fallback={<Loader />}>
         <Program />
       </Suspense>
       <Suspense fallback={<Loader />}>

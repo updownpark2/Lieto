@@ -59,8 +59,8 @@ export default function PosterView({ artist, time }) {
             {"1st" + artistArr[0][0] + "  2nd" + artistArr[0][1]}
           </ArtistName>
           <ul>
-            {artistArr[1].map((music) => (
-              <List>{music}</List>
+            {artistArr[1].map((music, i) => (
+              <List key={i}>{music}</List>
             ))}
           </ul>
           {index === 5 && artist.length === 7 ? null : (
