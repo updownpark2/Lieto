@@ -11,6 +11,7 @@ import "swiper/swiper-bundle.css";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { useState } from "react";
+import { Loader } from "../Loader.jsx";
 
 const frameInAnimation = keyframes`
   0% {
@@ -90,7 +91,7 @@ const Description = styled.p`
 `;
 export default function ArtistView() {
   const { ref, inView, entry } = useInView({ threshold: 0.2 });
-  const [imgArr, setImgArr] = useState([]);
+  const [imgArr, setImgArr] = useState(null);
 
   let isInitialGetImg = true;
 
@@ -112,30 +113,34 @@ export default function ArtistView() {
       <Container>
         <Title>Artist</Title>
         <SliderContainer ref={ref} inView={inView}>
-          <Swiper
-            modules={[Navigation, Pagination]}
-            spaceBetween={20}
-            slidesPerView={2}
-            breakpoints={{
-              767: {
-                slidesPerView: 3,
-              },
-            }}
-            loop={true}
-            navigation
-          >
-            {imgArr.map((img, i) => (
-              <SwiperSlide>
-                <Image src={img} />
-                <DescriptionContainer>
-                  <NameDescription>pf. {artist[i][0]}</NameDescription>
-                  {artist[i][1].map((info, _i) => (
-                    <Description key={_i}>{info}</Description>
-                  ))}
-                </DescriptionContainer>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          {imgArr === null ? (
+            <Loader />
+          ) : (
+            <Swiper
+              modules={[Navigation, Pagination]}
+              spaceBetween={20}
+              slidesPerView={2}
+              breakpoints={{
+                767: {
+                  slidesPerView: 3,
+                },
+              }}
+              loop={true}
+              navigation
+            >
+              {imgArr.map((img, i) => (
+                <SwiperSlide>
+                  <Image src={img} />
+                  <DescriptionContainer>
+                    <NameDescription>pf. {artist[i][0]}</NameDescription>
+                    {artist[i][1].map((info, _i) => (
+                      <Description key={_i}>{info}</Description>
+                    ))}
+                  </DescriptionContainer>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
         </SliderContainer>
       </Container>
     </Fake>

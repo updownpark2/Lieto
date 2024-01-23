@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import Spinner from "./spinner.gif";
+
 const Container = styled.div`
-  width: 100vh;
-  height: 100ch;
+  width: 100%;
+  height: 100vh;
   background-color: #ffe4e1;
   display: flex;
   align-items: center;
@@ -17,8 +17,8 @@ export const Loader = () => {
   return (
     <Container>
       <MentionBox>
+        <Mention>데이터 불러오는중</Mention>
         <Mention>잠시만 기다려주세요</Mention>
-        <img src={Spinner} alt="로딩" width="10%"></img>
       </MentionBox>
     </Container>
   );
