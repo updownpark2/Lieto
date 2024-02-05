@@ -11,9 +11,13 @@ export const artist = [
   [
     ["유수민", "최혜지"],
     [
-      "Kapustin - Sinfonietta for piano 4Hands, Op.49 ",
-      "I. Overture: Allegro",
-      "IV. Rondo: Presto",
+      "G.Faure - Dolly Suite for 1piano 4hands, Op.56",
+      "I. Berceuse",
+      "II. Mi-a-ou",
+      "III. Le jardin de Dolly",
+      "IV. Kitty-valse",
+      "V. Tendresse",
+      "VI. Le pas espagnol",
     ],
   ],
   [
