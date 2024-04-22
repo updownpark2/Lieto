@@ -27,8 +27,15 @@ const PosterImage = styled.img`
   }
 `;
 const PampletImage = styled.img`
-  width: 100%;
-  height: 100%;
+  height: auto;
+  position: relative;
+  background-color: transparent;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+  }
+  width: 70%;
+  height: 70%;
   object-fit: contain;
 `;
 
